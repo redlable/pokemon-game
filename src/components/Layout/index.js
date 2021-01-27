@@ -1,8 +1,10 @@
 import s from './style.module.css';
 
 const Layout = ({ id, title, descr, urlBg, colorBg }) => {
+  const sectionBg = urlBg ? {background: `url(${urlBg})`} : colorBg ? {background: colorBg} : {}
+
   return (
-    <section className={s.root} id={id}>
+    <section className={s.root} id={id} style={sectionBg}>
       <div className={s.wrapper}>
         <article>
           <div className={s.title}>
